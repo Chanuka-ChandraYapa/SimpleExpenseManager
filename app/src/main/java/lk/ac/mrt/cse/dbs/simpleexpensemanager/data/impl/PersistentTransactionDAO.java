@@ -1,14 +1,9 @@
 package lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl;
 
-import android.database.Cursor;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
-import lk.ac.mrt.cse.dbs.simpleexpensemanager.control.PersistentExpenseManager;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.TransactionDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.database.DbHandler;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.exception.InvalidAccountException;
@@ -42,22 +37,12 @@ public class PersistentTransactionDAO implements TransactionDAO {
 
     @Override
     public List<Transaction> getAllTransactionLogs() {
-        List<Transaction> transactions = this.db.readTransactions(0);
-        List<Transaction> retransactions = new ArrayList<>();
-        for(int i = transactions.size()-1;i >=0;i--){
-            retransactions.add(transactions.get(i));
-        }
-        return retransactions;
+        return this.db.readTransactions(0);
     }
 
     @Override
     public List<Transaction> getPaginatedTransactionLogs(int limit) {
-        List<Transaction> transactions = this.db.readTransactions(limit);
-        List<Transaction> retransactions = new ArrayList<>();
-        for(int i = transactions.size()-1;i >=0;i--){
-            retransactions.add(transactions.get(i));
-        }
-        return retransactions;
+        return this.db.readTransactions(limit);
     }
 
 

@@ -116,10 +116,10 @@ public class DbHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursorTransactions;
         if (limit == 0){
-            cursorTransactions = db.rawQuery("SELECT * FROM " + TABLE_TRANSACTIONS, null);
+            cursorTransactions = db.rawQuery("SELECT * FROM " + TABLE_TRANSACTIONS + " ORDER BY " + TRANSACTION_COL + " DESC ", null);
         }
         else {
-            cursorTransactions = db.rawQuery("SELECT * FROM " + TABLE_TRANSACTIONS + " LIMIT " + String.valueOf(limit), null);
+            cursorTransactions = db.rawQuery("SELECT * FROM " + TABLE_TRANSACTIONS + " ORDER BY " + TRANSACTION_COL + " DESC " + " LIMIT " + limit, null);
         }
 
         ArrayList<Transaction> transactionsArrayList = new ArrayList<>();
@@ -166,12 +166,7 @@ public class DbHandler extends SQLiteOpenHelper {
         }
 
         db.close();
-        if(result == -1){
-            return false;
-        }
-        else{
-            return true;
-        }
+        return result != -1;
     }
     public Integer deleteData(String table_name, String column, String id){
         SQLiteDatabase db = this.getWritableDatabase();

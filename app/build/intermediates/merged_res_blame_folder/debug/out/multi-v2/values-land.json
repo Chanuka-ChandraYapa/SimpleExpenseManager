@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Chanuka lakshan\\Documents\\Semster_3_Continued\\Database_Systems\\SimpleExpenseManager\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "lk.ac.mrt.cse.dbs.simpleexpensemanager.app-mergeDebugResources-9:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Chanuka lakshan\\.gradle\\caches\\transforms-2\\files-2.1\\e34959173497ceba9cee14729c6580d1\\appcompat-v7-26.1.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Chanuka lakshan\\.gradle\\caches\\transforms-3\\340a3290f7ebee0cf791d94cb8aeb1f9\\transformed\\appcompat-v7-26.1.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Chanuka lakshan\\.gradle\\caches\\transforms-2\\files-2.1\\4432033494a5b2439e6aaff872ab2b49\\design-26.1.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Chanuka lakshan\\.gradle\\caches\\transforms-3\\06794084a2567c5e1d2f6673d0f56d55\\transformed\\design-26.1.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

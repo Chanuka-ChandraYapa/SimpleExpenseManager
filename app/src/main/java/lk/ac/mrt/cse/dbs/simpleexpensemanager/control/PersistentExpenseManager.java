@@ -12,7 +12,7 @@ import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.PersistentTransactionDAO
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Account;
 
 public class PersistentExpenseManager extends ExpenseManager {
-    private DbHandler db;
+    private final DbHandler db;
     public PersistentExpenseManager(@Nullable Context context){
         this.db = new DbHandler(context);
         try{

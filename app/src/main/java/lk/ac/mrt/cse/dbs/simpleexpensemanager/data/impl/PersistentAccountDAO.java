@@ -1,5 +1,4 @@
 package lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl;
-import android.content.ContentValues;
 
 import java.util.ArrayList;
 import java.util.*;
@@ -21,7 +20,7 @@ public class PersistentAccountDAO implements AccountDAO {
     @Override
     public List<String> getAccountNumbersList() {
         List<Account> accounts = this.db.readAccounts();
-        List<String> accountNumbers = new ArrayList<String>();
+        List<String> accountNumbers = new ArrayList<>();
         for(int i = 0; i < accounts.size(); i++){
             accountNumbers.add(accounts.get(i).getAccountNo());
         }
@@ -30,8 +29,7 @@ public class PersistentAccountDAO implements AccountDAO {
 
     @Override
     public List<Account> getAccountsList() {
-        List<Account> accounts = this.db.readAccounts();
-        return accounts;
+        return this.db.readAccounts();
     }
 
     @Override
@@ -63,8 +61,8 @@ public class PersistentAccountDAO implements AccountDAO {
 
     @Override
     public void updateBalance(String accountNo, ExpenseType expenseType, double amount) throws InvalidAccountException {
-        double balance = 0;
-        double total = 0;
+        double balance;
+        double total;
         try{
             Account acc = getAccount(accountNo);
             balance = acc.getBalance();
